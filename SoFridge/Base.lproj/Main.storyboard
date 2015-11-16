@@ -136,7 +136,7 @@
                         <outlet property="descriptionProduit" destination="Yr7-a4-sUy" id="B1h-oe-FYr"/>
                         <outlet property="imageProduit" destination="Kwu-GU-T4i" id="Zso-M7-uEU"/>
                         <outlet property="prixProduit" destination="kRO-xQ-9Lf" id="b6k-3l-cz6"/>
-                        <outlet property="titreproduit" destination="kib-mh-gIX" id="aRM-nB-vyu"/>
+                        <outlet property="titreProduit" destination="kib-mh-gIX" id="vAJ-BA-TgN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-E1-yv1" userLabel="First Responder" sceneMemberID="firstResponder"/>

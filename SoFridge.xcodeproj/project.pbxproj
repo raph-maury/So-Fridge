@@ -13,7 +13,7 @@
 		CE573A351BEE2C16005B6A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */; };
 		CE573A401BEE2C16005B6A05 /* SoFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A3F1BEE2C16005B6A05 /* SoFridgeTests.swift */; };
 		CE573A4B1BEE2C16005B6A05 /* SoFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A4A1BEE2C16005B6A05 /* SoFridgeUITests.swift */; };
-		CE573A591BEE2C4E005B6A05 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A581BEE2C4E005B6A05 /* Data.swift */; };
+		CE573A591BEE2C4E005B6A05 /* Produit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A581BEE2C4E005B6A05 /* Produit.swift */; };
 		CE573A5D1BEE2ECC005B6A05 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A5C1BEE2ECC005B6A05 /* CustomTableViewController.swift */; };
 		CE573A5F1BEE2FF7005B6A05 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A5E1BEE2FF7005B6A05 /* CustomTableViewCell.swift */; };
 		CE573A641BEE3CC7005B6A05 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */; };
@@ -49,7 +49,7 @@
 		CE573A461BEE2C16005B6A05 /* SoFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE573A4A1BEE2C16005B6A05 /* SoFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoFridgeUITests.swift; sourceTree = "<group>"; };
 		CE573A4C1BEE2C16005B6A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE573A581BEE2C4E005B6A05 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		CE573A581BEE2C4E005B6A05 /* Produit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produit.swift; sourceTree = "<group>"; };
 		CE573A5C1BEE2ECC005B6A05 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		CE573A5E1BEE2FF7005B6A05 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */,
-				CE573A581BEE2C4E005B6A05 /* Data.swift */,
+				CE573A581BEE2C4E005B6A05 /* Produit.swift */,
 				CE573A2E1BEE2C16005B6A05 /* Main.storyboard */,
 				CE573A311BEE2C16005B6A05 /* Assets.xcassets */,
 				CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */,
@@ -272,7 +272,7 @@
 				CE573A5D1BEE2ECC005B6A05 /* CustomTableViewController.swift in Sources */,
 				CE573A641BEE3CC7005B6A05 /* DetailViewController.swift in Sources */,
 				CE573A5F1BEE2FF7005B6A05 /* CustomTableViewCell.swift in Sources */,
-				CE573A591BEE2C4E005B6A05 /* Data.swift in Sources */,
+				CE573A591BEE2C4E005B6A05 /* Produit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

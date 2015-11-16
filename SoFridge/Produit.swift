@@ -8,7 +8,19 @@
 
 import Foundation
 
-class Data{
+public class Produit{
+    
+    //création d'un tableau qui contiendra les nom des produits
+    var tabnomproduit: [String] = []
+    var tabprix: [String] = []
+    var tabimage: [String] = []
+    var tabdescription: [String] = []
+    
+    func url() -> NSURL {
+        let s = "http://raphaelmaury.fr/iot/dbjson.php"
+        
+        return NSURL(string: s)!
+    }
     
     class Entrer {
         let produit: String

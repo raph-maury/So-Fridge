@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
 
-    @IBOutlet weak var titreproduit: UILabel!
+    @IBOutlet weak var titreProduit: UILabel!
     @IBOutlet weak var descriptionProduit: UILabel!
     @IBOutlet weak var prixProduit: UILabel!
     @IBOutlet weak var imageProduit: UIImageView!
@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titreproduit.text = titre
+        titreProduit.text = titre
         descriptionProduit.text = Stringdescription
         prixProduit.text = StringPrix
         imageProduit.image = UIImage(named: StringImage)
