@@ -1,59 +1,16 @@
 //
-//  CustomTableViewController.swift
+//  DataSourceController.swift
 //  SoFridge
 //
-//  Created by Raphael MAURY on 07/11/2015.
+//  Created by Raphael MAURY on 19/11/2015.
 //  Copyright © 2015 Raphael MAURY. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class CustomTableViewController: UITableViewController {
-    
-    // MARK: Variables
-    //Appel de la class Produit
+class DataSourceController {
     var data = Produit()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Appel de la fonction researchJson
-        researchJson()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return data.tabnomproduit.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cellule", forIndexPath: indexPath) as! CustomTableViewCell
-
-        cell.titreProduit.text = data.tabnomproduit[indexPath.row]
-        
-        if  cell.titreProduit.text == nil {
-            cell.activityIMD.startAnimating()
-            cell.activityIMD.hidden = false
-        }else {
-            cell.activityIMD.stopAnimating()
-            cell.activityIMD.hidden = true
-        }
-        
-        let urlimage = NSURL(string: data.tabimage[indexPath.row])
-        let dataImage = NSData(contentsOfURL: urlimage!)
-        cell.imageProduit.image = UIImage(data: dataImage!)
-        
-        return cell
-    }
+    
     //MARK: - REST calls
     // Cette fonction permet d'aller chercher des informations sur un serveur via un fichier Json
     func researchJson() {
@@ -82,7 +39,6 @@ class CustomTableViewController: UITableViewController {
                             print(produit)
                             let collection = produit! as! Dictionary<String, AnyObject>
                             //On recupere les données
-                            let idproduit : AnyObject? = collection["Id"]
                             let nomproduit : AnyObject? = collection["Nom_Produit"]
                             let prix : AnyObject? = collection["Prix"]
                             let description : AnyObject? = collection["Description"]
@@ -90,25 +46,22 @@ class CustomTableViewController: UITableViewController {
                             let image : AnyObject? = collection["Image"]
                             
                             //On ajoute dans le tableau
-                            self.data.tabid.append(idproduit as! String)
                             self.data.tabnomproduit.append(nomproduit as! String)
                             self.data.tabprix.append(prix as! String)
                             self.data.tabdescription.append(description as! String)
                             self.data.tabcalorie.append(calorie as! String)
                             self.data.tabimage.append(image as! String)
                             //Verification via la console
-                            print(self.data.tabid)
                             print(self.data.tabnomproduit)
                             print(self.data.tabprix)
                             print(self.data.tabdescription)
                             print(self.data.tabimage)
-                            
                         }
                     }
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.tableView.reloadData()
+                    //self.tableView.reloadData()
                 })
                 
             } catch {
@@ -116,29 +69,6 @@ class CustomTableViewController: UITableViewController {
                 print("Erreur Json")
             }
         }).resume()
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "detail"{
-            let detail = segue.destinationViewController as! DetailViewController
-            if let indexpath = tableView.indexPathForCell(sender as! UITableViewCell){
-                let entreid = data.tabid[indexpath.row]
-                let entrenom = data.tabnomproduit[indexpath.row]
-                let entreprix = data.tabprix[indexpath.row]
-                let entredescription = data.tabdescription[indexpath.row]
-                let entrecalorie = data.tabcalorie[indexpath.row]
-                let entreimage = data.tabimage[indexpath.row]
-                
-                
-                detail.StringId = entreid
-                detail.StringPorduit = entrenom
-                detail.StringPrix = entreprix
-                detail.Stringdescription = entredescription
-                detail.StringCalorie = entrecalorie
-                detail.StringImage = entreimage
-                
-            }
-        }
     }
     
 }

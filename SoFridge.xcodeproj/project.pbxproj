@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE06CC881C00830B00884C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE06CC871C00830B00884C2B /* Main.storyboard */; };
 		CE573A2B1BEE2C16005B6A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */; };
-		CE573A301BEE2C16005B6A05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573A2E1BEE2C16005B6A05 /* Main.storyboard */; };
 		CE573A321BEE2C16005B6A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE573A311BEE2C16005B6A05 /* Assets.xcassets */; };
 		CE573A351BEE2C16005B6A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */; };
 		CE573A401BEE2C16005B6A05 /* SoFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A3F1BEE2C16005B6A05 /* SoFridgeTests.swift */; };
@@ -17,6 +17,8 @@
 		CE573A5D1BEE2ECC005B6A05 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A5C1BEE2ECC005B6A05 /* CustomTableViewController.swift */; };
 		CE573A5F1BEE2FF7005B6A05 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A5E1BEE2FF7005B6A05 /* CustomTableViewCell.swift */; };
 		CE573A641BEE3CC7005B6A05 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */; };
+		CE7220EE1BFCF73300C8E15E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7220ED1BFCF73300C8E15E /* EditViewController.swift */; };
+		CEC322B51BFE448A002AEAD5 /* DataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC322B41BFE448A002AEAD5 /* DataSourceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +38,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE3460991BFBA0E10016A441 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CE06CC871C00830B00884C2B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE573A271BEE2C16005B6A05 /* SoFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE573A2F1BEE2C16005B6A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE573A311BEE2C16005B6A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE573A341BEE2C16005B6A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE573A361BEE2C16005B6A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +68,8 @@
 		CE573A5C1BEE2ECC005B6A05 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		CE573A5E1BEE2FF7005B6A05 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CE7220ED1BFCF73300C8E15E /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		CEC322B41BFE448A002AEAD5 /* DataSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +122,15 @@
 			children = (
 				CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */,
 				CE573A581BEE2C4E005B6A05 /* Produit.swift */,
-				CE573A2E1BEE2C16005B6A05 /* Main.storyboard */,
+				CE7220ED1BFCF73300C8E15E /* EditViewController.swift */,
+				CE06CC871C00830B00884C2B /* Main.storyboard */,
 				CE573A311BEE2C16005B6A05 /* Assets.xcassets */,
 				CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */,
 				CE573A361BEE2C16005B6A05 /* Info.plist */,
 				CE573A5C1BEE2ECC005B6A05 /* CustomTableViewController.swift */,
 				CE573A5E1BEE2FF7005B6A05 /* CustomTableViewCell.swift */,
 				CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */,
+				CEC322B41BFE448A002AEAD5 /* DataSourceController.swift */,
 			);
 			path = SoFridge;
 			sourceTree = "<group>";
@@ -144,6 +163,7 @@
 				CE573A231BEE2C16005B6A05 /* Sources */,
 				CE573A241BEE2C16005B6A05 /* Frameworks */,
 				CE573A251BEE2C16005B6A05 /* Resources */,
+				CE3460991BFBA0E10016A441 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,9 +261,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE06CC881C00830B00884C2B /* Main.storyboard in Resources */,
 				CE573A351BEE2C16005B6A05 /* LaunchScreen.storyboard in Resources */,
 				CE573A321BEE2C16005B6A05 /* Assets.xcassets in Resources */,
-				CE573A301BEE2C16005B6A05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +290,9 @@
 			files = (
 				CE573A2B1BEE2C16005B6A05 /* AppDelegate.swift in Sources */,
 				CE573A5D1BEE2ECC005B6A05 /* CustomTableViewController.swift in Sources */,
+				CE7220EE1BFCF73300C8E15E /* EditViewController.swift in Sources */,
 				CE573A641BEE3CC7005B6A05 /* DetailViewController.swift in Sources */,
+				CEC322B51BFE448A002AEAD5 /* DataSourceController.swift in Sources */,
 				CE573A5F1BEE2FF7005B6A05 /* CustomTableViewCell.swift in Sources */,
 				CE573A591BEE2C4E005B6A05 /* Produit.swift in Sources */,
 			);
@@ -308,14 +330,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE573A2E1BEE2C16005B6A05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE573A2F1BEE2C16005B6A05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SoFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rm.SoFridge;
@@ -423,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SoFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rm.SoFridge;

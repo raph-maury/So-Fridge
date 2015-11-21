@@ -7,36 +7,28 @@
 //
 
 import Foundation
-
 public class Produit{
     
-    //création d'un tableau qui contiendra les nom des produits
-    var tabnomproduit: [String] = []
-    var tabprix: [String] = []
-    var tabimage: [String] = []
-    var tabdescription: [String] = []
+    ////////////////////////////
+    //MARK: Variable du produit
+    ////////////////////////////
     
+    //création d'un tableau sur chaques variables qui contiendra les caracteristiques des produits
+    var tabid: [String] = []
+    var tabnomproduit: [String] = []
+    var tabdescription: [String] = []
+    var tabprix: [String] = []
+    var tabcalorie: [String] = []
+    var tabimage: [String] = []
+    
+    ////////////////
+    //MARK: Focntion
+    ////////////////
+    
+    //Fonction Url où se trouve le lien du fichier Json
     func url() -> NSURL {
         let s = "http://raphaelmaury.fr/iot/dbjson.php"
         
         return NSURL(string: s)!
     }
-    
-    class Entrer {
-        let produit: String
-        let image: String
-        let prix: Double
-        let description: String
-        init(produit: String,image: String, prix: Double, description: String){
-            self.produit = produit
-            self.image = image
-            self.prix = prix
-            self.description = description
-        }
-    }
-    
-    let donnee = [
-        Entrer(produit: "Beurre",image: "beurre.png", prix: 2.1, description: "Plaquette de beurre de 125g"),
-        Entrer(produit: "Creme fraiche",image: "creme.png", prix: 3.2, description: "Creme fraiche 30 % de matière grasse 20cl"),
-        Entrer(produit: "Lait",image: "lait.png", prix: 0.83, description: "Lait demi-ecreme, 1L")]
 }

@@ -10,9 +10,17 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-
+    ////////////////////////////////
+    //MARK: Variable Object library
+    ///////////////////////////////
+    
+    @IBOutlet weak var activityIMD: UIActivityIndicatorView!
     @IBOutlet weak var titreProduit: UILabel!
     @IBOutlet weak var imageProduit: UIImageView!
+    
+    /////////////////
+    //MARK: Focntions
+    /////////////////
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +29,6 @@ class CustomTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
