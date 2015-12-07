@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CustomTableViewController: UITableViewController {
+class CustomTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     // MARK: Variables
     //Appel de la class Produit
     var data = Produit()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Appel de la fonction researchJson
@@ -69,9 +69,9 @@ class CustomTableViewController: UITableViewController {
             }
             //Lecture du Json
             do {
-                if let ipString = NSString(data:data!, encoding: NSUTF8StringEncoding) {
+                if let jsonData = NSString(data:data!, encoding: NSUTF8StringEncoding) {
                     //Affiche dans la console le fichier Json
-                    print(ipString)
+                    print("Contenu du fichier json \(jsonData)")
                     
                     let jsonDictionary: AnyObject! = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                     if let json = jsonDictionary as? Array<AnyObject> {

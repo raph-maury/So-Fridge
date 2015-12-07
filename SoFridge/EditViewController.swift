@@ -53,7 +53,7 @@ class EditViewController: UIViewController {
             
             PostData()
             //On change de vue grace à l'identifiant "r" que l'on a définis dans notre Storyboard
-            //performSegueWithIdentifier("r", sender: self)
+            performSegueWithIdentifier("r", sender: self)
         }
     }
 
