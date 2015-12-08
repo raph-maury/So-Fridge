@@ -8,14 +8,29 @@
 
 import UIKit
 
-class CustomTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
+class CustomTableViewController: UITableViewController, UISearchResultsUpdating {
     
     // MARK: Variables
     //Appel de la class Produit
     var data = Produit()
+    var filtreProduit = [String]()
+    var resultSearchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.resultSearchController = UISearchController(searchResultsController: nil)
+        self.resultSearchController.searchResultsUpdater = self
+        
+        self.resultSearchController.dimsBackgroundDuringPresentation = false
+        self.resultSearchController.searchBar.sizeToFit()
+        self.resultSearchController.searchBar.placeholder = "Rechercher"
+        self.resultSearchController.searchBar.barTintColor = UIColor.purpleColor()
+        
+        self.tableView.tableHeaderView = self.resultSearchController.searchBar
+        
+        self.tableView.reloadData()
+        
         //Appel de la fonction researchJson
         researchJson()
     }
@@ -32,14 +47,18 @@ class CustomTableViewController: UITableViewController, UISearchBarDelegate, UIS
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.tabnomproduit.count
+        if self.resultSearchController.active
+        {
+            return self.filtreProduit.count
+        }
+        else{
+            return data.tabnomproduit.count
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cellule", forIndexPath: indexPath) as! CustomTableViewCell
 
-        cell.titreProduit.text = data.tabnomproduit[indexPath.row]
-        
         if  cell.titreProduit.text == nil {
             cell.activityIMD.startAnimating()
             cell.activityIMD.hidden = false
@@ -48,12 +67,21 @@ class CustomTableViewController: UITableViewController, UISearchBarDelegate, UIS
             cell.activityIMD.hidden = true
         }
         
-        let urlimage = NSURL(string: data.tabimage[indexPath.row])
-        let dataImage = NSData(contentsOfURL: urlimage!)
-        cell.imageProduit.image = UIImage(data: dataImage!)
+        if self.resultSearchController.active{
+             cell.titreProduit.text = self.filtreProduit[indexPath.row]
+        }else{
+            cell.titreProduit.text = data.tabnomproduit[indexPath.row]
+            let urlimage = NSURL(string: data.tabimage[indexPath.row])
+            let dataImage = NSData(contentsOfURL: urlimage!)
+            cell.imageProduit.image = UIImage(data: dataImage!)
+        }
+        
         
         return cell
     }
+    
+    
+    
     //MARK: - REST calls
     // Cette fonction permet d'aller chercher des informations sur un serveur via un fichier Json
     func researchJson() {
@@ -139,6 +167,16 @@ class CustomTableViewController: UITableViewController, UISearchBarDelegate, UIS
                 
             }
         }
+    }
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        self.filtreProduit.removeAll(keepCapacity: false)
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        
+        let array = (self.data.tabnomproduit as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        
+        self.filtreProduit = array as! [String]
+        
+        self.tableView.reloadData()
     }
     
 }

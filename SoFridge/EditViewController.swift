@@ -47,7 +47,7 @@ class EditViewController: UIViewController {
         
             let alert = UIAlertController(title: "Erreur", message: "Aucune variable est rentrée", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            presentViewController(alert, animated: true, completion: nil)
             
         }else{
             
