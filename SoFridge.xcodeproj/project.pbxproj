@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE06CC881C00830B00884C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE06CC871C00830B00884C2B /* Main.storyboard */; };
+		CE2E20F41C171995009AE531 /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E20F31C171995009AE531 /* AuthentificationViewController.swift */; };
 		CE573A2B1BEE2C16005B6A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */; };
 		CE573A321BEE2C16005B6A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE573A311BEE2C16005B6A05 /* Assets.xcassets */; };
 		CE573A351BEE2C16005B6A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		CE06CC871C00830B00884C2B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE2E20F31C171995009AE531 /* AuthentificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 		CE573A271BEE2C16005B6A05 /* SoFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE573A311BEE2C16005B6A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				CE573A2A1BEE2C16005B6A05 /* AppDelegate.swift */,
 				CE573A581BEE2C4E005B6A05 /* Produit.swift */,
 				CE7220ED1BFCF73300C8E15E /* EditViewController.swift */,
+				CE2E20F31C171995009AE531 /* AuthentificationViewController.swift */,
 				CE06CC871C00830B00884C2B /* Main.storyboard */,
 				CE573A311BEE2C16005B6A05 /* Assets.xcassets */,
 				CE573A331BEE2C16005B6A05 /* LaunchScreen.storyboard */,
@@ -293,6 +296,7 @@
 				CE7220EE1BFCF73300C8E15E /* EditViewController.swift in Sources */,
 				CE573A641BEE3CC7005B6A05 /* DetailViewController.swift in Sources */,
 				CEC322B51BFE448A002AEAD5 /* DataSourceController.swift in Sources */,
+				CE2E20F41C171995009AE531 /* AuthentificationViewController.swift in Sources */,
 				CE573A5F1BEE2FF7005B6A05 /* CustomTableViewCell.swift in Sources */,
 				CE573A591BEE2C4E005B6A05 /* Produit.swift in Sources */,
 			);

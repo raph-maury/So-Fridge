@@ -36,29 +36,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSExceptionDomains</key>
-        <dict>
-            <key>yourserver.com</key>
-            <dict>
-                <!--Include to allow subdomains-->
-                <key>NSIncludesSubdomains</key>
-                <true/>
-                <!--Include to allow HTTP requests-->
-                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <!--Include to specify minimum TLS version-->
-                <key>NSTemporaryExceptionMinimumTLSVersion</key>
-                <string>TLSv1.1</string>
-            </dict>
-        </dict>
-    </dict>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <!--Include to allow all connections (DANGER)-->
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
+	<key>Fonts provided by the application</key>
+	<array>
+		<string>Starjout.ttf</string>
+		<string>STJEDISE.TTF</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
