@@ -21,7 +21,8 @@
 		CE7220EE1BFCF73300C8E15E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7220ED1BFCF73300C8E15E /* EditViewController.swift */; };
 		CEB179D11C20000A005EC623 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB179CC1C1FFE4D005EC623 /* Charts.framework */; };
 		CEB179D21C20000A005EC623 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEB179CC1C1FFE4D005EC623 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CEB179D71C200A54005EC623 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB179D61C200A54005EC623 /* BarChartViewController.swift */; };
+		CEB179D71C200A54005EC623 /* CalorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB179D61C200A54005EC623 /* CalorieViewController.swift */; };
+		CEB179DB1C2050F9005EC623 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB179DA1C2050F9005EC623 /* BudgetViewController.swift */; };
 		CEC322B51BFE448A002AEAD5 /* DataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC322B41BFE448A002AEAD5 /* DataSourceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +105,8 @@
 		CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE7220ED1BFCF73300C8E15E /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		CEB179C51C1FFE4D005EC623 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/ios-charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
-		CEB179D61C200A54005EC623 /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		CEB179D61C200A54005EC623 /* CalorieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieViewController.swift; sourceTree = "<group>"; };
+		CEB179DA1C2050F9005EC623 /* BudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		CEC322B41BFE448A002AEAD5 /* DataSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +172,8 @@
 				CE573A5E1BEE2FF7005B6A05 /* CustomTableViewCell.swift */,
 				CE573A631BEE3CC7005B6A05 /* DetailViewController.swift */,
 				CEC322B41BFE448A002AEAD5 /* DataSourceController.swift */,
-				CEB179D61C200A54005EC623 /* BarChartViewController.swift */,
+				CEB179D61C200A54005EC623 /* CalorieViewController.swift */,
+				CEB179DA1C2050F9005EC623 /* BudgetViewController.swift */,
 			);
 			path = SoFridge;
 			sourceTree = "<group>";
@@ -371,11 +374,12 @@
 			files = (
 				CE573A2B1BEE2C16005B6A05 /* AppDelegate.swift in Sources */,
 				CE573A5D1BEE2ECC005B6A05 /* CustomTableViewController.swift in Sources */,
-				CEB179D71C200A54005EC623 /* BarChartViewController.swift in Sources */,
+				CEB179D71C200A54005EC623 /* CalorieViewController.swift in Sources */,
 				CE7220EE1BFCF73300C8E15E /* EditViewController.swift in Sources */,
 				CE573A641BEE3CC7005B6A05 /* DetailViewController.swift in Sources */,
 				CEC322B51BFE448A002AEAD5 /* DataSourceController.swift in Sources */,
 				CE2E20F41C171995009AE531 /* AuthentificationViewController.swift in Sources */,
+				CEB179DB1C2050F9005EC623 /* BudgetViewController.swift in Sources */,
 				CE573A5F1BEE2FF7005B6A05 /* CustomTableViewCell.swift in Sources */,
 				CE573A591BEE2C4E005B6A05 /* Produit.swift in Sources */,
 			);
